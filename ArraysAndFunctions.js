@@ -1,10 +1,31 @@
 //1.	Create an array called ages that contains the following values: 3, 9, 23, 64, 2, 8, 28, 93.
+let ages = [3, 9, 23, 64, 2, 8, 28, 93];
+console.log(ages);
+
 //1a.	Programmatically subtract the value of the first element in the array from the value in the last element of the array
 //•	Do not use numbers to reference the last element, find it programmatically,
 //•	ages[7] – ages[0] is not allowed!
 
+function subtraction() {
+  let firstNumber = ages[0];
+  let index = ages.length - 1;
+  let lastNumber = ages[index];
+  let subtraction = lastNumber - firstNumber;
+  return `${lastNumber} - ${firstNumber} = ${subtraction}`;
+}
+console.log(subtraction());
+
 //1b.	Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).
+ages.push(41);
+console.log(ages);
+console.log(subtraction());
+
 //1c.	Use a loop to iterate through the array and calculate the average age.
+let sum = 0;
+for (i = 0; i < ages.length; i++) sum += ages[i];
+averageAge = sum / ages.length;
+console.log(sum);
+console.log(averageAge);
 
 //2.	Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
 //2a.	Use a loop to iterate through the array and calculate the average number of letters per name.
