@@ -44,8 +44,9 @@ console.log(total);
 console.log(averageNumberOfLetters);
 
 //2b.	Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
+
 let concatenate = '';
-for (i = 0; i < names.length; i++) {
+for (let i = 0; i < names.length; i++) {
   concatenate = concatenate.concat(names[i]);
   if (i < names.length - 1) {
     concatenate = concatenate.concat(' ');
@@ -63,6 +64,11 @@ console.log(concatenate);
 
 //namesArray = ["Kelly", "Sam", "Kate"] //given this array
 //nameLengths = [5, 3, 4] //create this new array
+let nameLengths = [];
+for (let i = 0; i < names.length; i++) {
+  nameLengths = names.length[i];
+  console.log(nameLengths);
+}
 
 //6.	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 
@@ -70,14 +76,80 @@ console.log(concatenate);
 
 //8.	Write a function that takes two parameters, firstName and lastName, and returns a full name.
 //•	The full name should be the first and the last name separated by a space.
+function fullName(firstName, lastName) {
+  console.log(`${firstName} ${lastName}`);
+}
+fullName('Adam', 'Courigton');
 
 //9.	Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+let add = 0;
+function greaterThanHundred(array) {
+  for (i = 0; i < array.length; i++) {
+    add += array[i];
+  }
+  if (add > 100) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(greaterThanHundred([6, 80, 15]));
 
 //10.	Write a function that takes an array of numbers and returns the average of all the elements in the array.
 
+function averageOfElements(element) {
+  let more = 0;
+  for (i = 0; i < element.length; i++) {
+    more += element[i];
+  }
+  return more / element.length;
+}
+
+console.log(averageOfElements([5, 10, 15, 50]));
+
 //11.	Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+function highestAverage(array1, array2) {
+  let more = 0;
+  for (i = 0; i < array1.length; i++) {
+    more += array1[i];
+  }
+  let aveArray1 = more / array1.length;
+  let more2 = 0;
+  for (i = 0; i < array2.length; i++) {
+    more2 += array2[i];
+  }
+  let aveArray2 = more2 / array2.length;
+  if (aveArray1 > aveArray2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(highestAverage([5, 10000, 15], [5, 10, 15, 50]));
 
 //12.	Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 
+function willBuyDrink(isHotOutside, moneyInPocket) {
+  if (isHotOutside == true && moneyInPocket > 10.5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(willBuyDrink(true, 1));
 //13.	Create a function of your own that solves a problem.
 //In comments, write what the function does and why you created it.
+
+//My function called Mondays argument day of the week and is it a holiday.  If day of the week is monday and holiday is false.  I will get up early.
+
+function goToWork(day, holiday) {
+  if (day == 'Weekday' && holiday == false) {
+    return 'Get up and go to work!';
+  } else {
+    return 'Sleep in today!';
+  }
+}
+
+console.log(goToWork('Weekday', false));
