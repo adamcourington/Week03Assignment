@@ -53,8 +53,10 @@ for (i = 0; i < names.length; i++) {
 }
 console.log(concatenate);
 //3.	How do you access the last element of any array?
+// To access an element in the array. We refer to the variable name and the index for the element we want to access.  Arrays are a zero based index, in order to access the last element of any array you take the total number of elements and subtract 1.
 
 //4.	How do you access the first element of any array?
+// To access the first element in a array we look at the name of the array and the index.  Arrays are a zero based index, so to acces the first element we would choose 0 as the index.
 
 //5.	Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 //For example:
