@@ -66,13 +66,24 @@ console.log(concatenate);
 //nameLengths = [5, 3, 4] //create this new array
 let nameLengths = [];
 for (let i = 0; i < names.length; i++) {
-  nameLengths = names.length[i];
-  console.log(nameLengths);
+  nameLengths[i] = names[i].length;
 }
+console.log(nameLengths);
 
 //6.	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
+let all = 0;
+for (i = 0; i < nameLengths.length; i++) {
+  all += nameLengths[i];
+}
 
+console.log(all);
 //7.	Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
+
+function printMore(word, n) {
+  return word.repeat(n);
+}
+
+console.log(printMore('Hello', 3));
 
 //8.	Write a function that takes two parameters, firstName and lastName, and returns a full name.
 //•	The full name should be the first and the last name separated by a space.
