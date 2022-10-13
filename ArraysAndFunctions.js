@@ -10,8 +10,8 @@ function subtraction() {
   let firstNumber = ages[0];
   let index = ages.length - 1;
   let lastNumber = ages[index];
-  let subtraction = lastNumber - firstNumber;
-  return `${lastNumber} - ${firstNumber} = ${subtraction}`;
+  let solution = lastNumber - firstNumber;
+  return `${lastNumber} - ${firstNumber} = ${solution}`;
 }
 console.log(subtraction());
 
